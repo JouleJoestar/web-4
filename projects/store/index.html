@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen" />
+</head>
+<body>
+    <div class="form-group">
+        <input type="text" id="name" placeholder="Имя">
+        <input type="text" id="surname" placeholder="Фамилия">
+    </div>
+    <div class="menu-container">
+        <div class="menu-section">
+            <h2>Напитки</h2>
+            <div class="menu-item">
+                <input type="checkbox" id="Choice1" name="drink" value="80" onchange="updateQuantity(this)">
+                <label for="Choice1">Эспрессо 80р.</label>
+                <input type="number" id="Choice1-qty" value="0" min="0" onchange="updateTotal()">
+            </div>
+            <div class="menu-item">
+                <input type="checkbox" id="Choice2" name="drink" value="110" onchange="updateQuantity(this)">
+                <label for="Choice2">Американо 110р.</label>
+                <input type="number" id="Choice2-qty" value="0" min="0" onchange="updateTotal()">
+            </div>
+            <div class="menu-item">
+                <input type="checkbox" id="Choice3" name="drink" value="120" onchange="updateQuantity(this)">
+                <label for="Choice3">Латте 120р.</label>
+                <input type="number" id="Choice3-qty" value="0" min="0" onchange="updateTotal()">
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Еда</h2>
+            <div class="menu-item">
+                <input type="checkbox" id="Choice4" name="food" value="90" onchange="updateQuantity(this)">
+                <label for="Choice4">Капучино с сиропом 90р</label>
+                <input type="number" id="Choice4-qty" value="0" min="0" onchange="updateTotal()">
+            </div>
+            <div class="menu-item">
+                <input type="checkbox" id="Choice5" name="food" value="80" onchange="updateQuantity(this)">
+                <label for="Choice5">Шоколадный кекс 80р.</label>
+                <input type="number" id="Choice5-qty" value="0" min="0" onchange="updateTotal()">
+            </div>
+            <div class="menu-item">
+                <input type="checkbox" id="Choice6" name="food" value="90" onchange="updateQuantity(this)">
+                <label for="Choice6">Черничный кекс 90р.</label>
+                <input type="number" id="Choice6-qty" value="0" min="0" onchange="updateTotal()">
+            </div>
+            <div class="menu-item">
+                <input type="checkbox" id="Choice7" name="food" value="100" onchange="updateQuantity(this)">
+                <label for="Choice7">Яблочный тарт 100р.</label>
+                <input type="number" id="Choice7-qty" value="0" min="0" onchange="updateTotal()">
+            </div>
+        </div>
+    </div>
+    <div id="Itogo">
+        <p>Итого: <span id="totalCost">0 р.</span></p>
+        <button id="sumBTN" onclick="calculateTotal()">Оформить заказ</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
