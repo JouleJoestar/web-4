@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" media="screen" />
+</head>
+<body>
+    <h3>Выберите товары: </h3>
+    <div>
+        <input type="checkbox" id="Choice1" name="food" value="120">
+        <label for="Choice1">Пирог (120 руб.)</label>
+    </div>
+    <div>
+        <input type="checkbox" id="Choice2" name="food" value="80">
+        <label for="Choice2">Кекс (80 руб.)</label>
+    </div>
+    <div>
+        <input type="checkbox" id="Choice3" name="food" value="180">
+        <label for="Choice3">Чизкейк (180 руб.)</label>
+    </div>
+
+    <button id="sumBTN" onclick="calculateSum()">Выбрать</button>
+    <p>Общая стоимость: <span id="totalCost">0</span></p>
+    <script src="main.js"></script>
+</body>
+</html>
